@@ -16,3 +16,7 @@ class Aluno:
 
     def adiciona_telefone(self, ddd: str, numero: str):
         self.__telefone.append(Telefone(ddd, numero))
+
+    @property
+    def cpf(self):
+        return self.__cpf.numero

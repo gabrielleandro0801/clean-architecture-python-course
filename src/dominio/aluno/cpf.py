@@ -10,7 +10,11 @@ class CPF:
     def __init__(self, valor: str):
         if not is_valid(valor):
             raise InvalidEmailException(valor)
-        self.__valor: str = valor
+        self.__numero: str = valor
+
+    @property
+    def numero(self):
+        return self.__numero
 
 
 def is_valid(valor: str) -> bool:
