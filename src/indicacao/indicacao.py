@@ -1,6 +1,6 @@
 import datetime
 
-from aluno import Aluno
+from src.aluno.aluno import Aluno
 
 
 class Indicacao:

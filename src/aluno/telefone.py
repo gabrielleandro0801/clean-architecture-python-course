@@ -1,4 +1,4 @@
-from exceptions import InvalidTelefoneException
+from src.exceptions import InvalidTelefoneException
 
 
 class Telefone:
