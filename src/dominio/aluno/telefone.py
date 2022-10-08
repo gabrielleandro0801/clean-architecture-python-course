@@ -1,4 +1,4 @@
-from src.exceptions import InvalidTelefoneException
+from src.dominio.exceptions import InvalidTelefoneException
 
 
 class Telefone:
