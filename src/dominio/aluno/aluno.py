@@ -1,8 +1,8 @@
 from typing import List
 
-from cpf import CPF
-from email import Email
-from telefone import Telefone
+from src.dominio.aluno.cpf import CPF
+from src.dominio.aluno.email import Email
+from src.dominio.aluno.telefone import Telefone
 
 
 class Aluno:

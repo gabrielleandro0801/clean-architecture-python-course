@@ -1,6 +1,6 @@
 import re
 
-from exceptions import InvalidEmailException
+from src.dominio.exceptions import InvalidEmailException
 
 regex = re.compile(r'\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}')
 
