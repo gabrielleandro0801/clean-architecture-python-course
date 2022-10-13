@@ -3,6 +3,7 @@ from typing import List
 from src.dominio.aluno.cpf import CPF
 from src.dominio.aluno.email import Email
 from src.dominio.aluno.telefone import Telefone
+from src.dominio.exceptions import UnableToAddTelefoneException
 
 
 class Aluno:
@@ -15,6 +16,8 @@ class Aluno:
         self.__email: Email = kwargs.get("email")
 
     def adiciona_telefone(self, ddd: str, numero: str):
+        if len(self.__telefone) == 2:
+            raise UnableToAddTelefoneException(ddd, numero)
         self.__telefone.append(Telefone(ddd, numero))
 
     @property
