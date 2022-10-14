@@ -13,5 +13,5 @@ class AlunoMatriculado(Evento):
     def momento(self) -> str:
         return self.__momento
 
-    def busca_cpf_do_aluno(self) -> CPF:
+    def busca_cpf_do_aluno(self) -> str:
         return self.__cpf.numero
