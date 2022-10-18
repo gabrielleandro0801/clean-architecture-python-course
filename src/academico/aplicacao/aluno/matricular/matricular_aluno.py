@@ -2,8 +2,8 @@ from src.academico.aplicacao.aluno.matricular.matricular_aluno_dto import Matric
 from src.academico.dominio.aluno.aluno import Aluno
 from src.academico.dominio.aluno.aluno_matriculado import AlunoMatriculado
 from src.academico.dominio.aluno.repositorio_de_alunos import RepositorioDeAlunos
-from src.academico.dominio.evento import Evento
-from src.academico.dominio.publicador_de_eventos import PublicadorDeEventos
+from src.shared.domain.evento.evento import Evento
+from src.shared.domain.evento.publicador_de_eventos import PublicadorDeEventos
 
 
 class MatricularAluno:

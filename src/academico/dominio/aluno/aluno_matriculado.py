@@ -1,7 +1,8 @@
 from datetime import datetime
 
-from src.academico.dominio.aluno.cpf import CPF
-from src.academico.dominio.evento import Evento
+from src.shared.domain.cpf import CPF
+from src.shared.domain.evento.evento import Evento
+from src.shared.domain.evento.tipo_de_evento import TipoDeEvento
 
 
 class AlunoMatriculado(Evento):
@@ -15,3 +16,11 @@ class AlunoMatriculado(Evento):
 
     def busca_cpf_do_aluno(self) -> str:
         return self.__cpf.numero
+
+    def tipo(self) -> TipoDeEvento:
+        return TipoDeEvento.ALUNO_MATRICULADO
+
+    def informacoes(self) -> dict:
+        return {
+            "cpf": self.__cpf
+        }

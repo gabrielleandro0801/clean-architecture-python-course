@@ -2,7 +2,7 @@ from abc import abstractmethod, ABC
 from typing import List
 
 from src.academico.dominio.aluno.aluno import Aluno
-from src.academico.dominio.aluno.cpf import CPF
+from src.shared.domain.cpf import CPF
 
 
 class RepositorioDeAlunos(ABC):

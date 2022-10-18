@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.academico.dominio.evento import Evento
+from src.shared.domain.evento.evento import Evento
 
 
 class Ouvinte(ABC):
@@ -14,5 +14,5 @@ class Ouvinte(ABC):
         pass
 
     @abstractmethod
-    def reage_ao(self, evento: Evento) -> bool:
+    def reage_ao(self, evento: Evento):
         pass

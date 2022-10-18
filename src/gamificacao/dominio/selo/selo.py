@@ -1,9 +1,9 @@
-from src.academico.dominio.aluno.cpf import CPF
+from src.shared.domain.cpf import CPF
 
 
 class Selo:
 
-    def __init__(self, nome, cpf):
+    def __init__(self, nome: str, cpf: CPF):
         self.__nome: str = nome
         self.__cpf_do_aluno: CPF = cpf
 

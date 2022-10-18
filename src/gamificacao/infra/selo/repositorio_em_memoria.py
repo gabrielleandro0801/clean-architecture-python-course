@@ -1,11 +1,11 @@
 from typing import List
 
-from src.academico.dominio.aluno.cpf import CPF
-from src.gamificacao.dominio.selo.repositorio_de_selo import RepositorioDeSelo
+from src.shared.domain.cpf import CPF
+from src.gamificacao.dominio.selo.repositorio_de_selo import RepositorioDeSelos
 from src.gamificacao.dominio.selo.selo import Selo
 
 
-class RepositorioDeSeloEmMemoria(RepositorioDeSelo):
+class RepositorioDeSelosEmMemoria(RepositorioDeSelos):
     __selos: List[Selo] = []
 
     def selos_do_aluno(self, cpf: CPF) -> List[Selo]:

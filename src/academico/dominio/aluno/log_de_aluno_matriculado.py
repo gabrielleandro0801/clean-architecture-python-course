@@ -1,8 +1,8 @@
 from typing import Any
 
 from src.academico.dominio.aluno.aluno_matriculado import AlunoMatriculado
-from src.academico.dominio.evento import Evento
-from src.academico.dominio.ouvinte import Ouvinte
+from src.shared.domain.evento.evento import Evento
+from src.shared.domain.evento.ouvinte import Ouvinte
 
 
 class LogDeAlunoMatriculado(Ouvinte):

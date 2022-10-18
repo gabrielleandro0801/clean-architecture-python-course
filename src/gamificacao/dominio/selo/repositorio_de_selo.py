@@ -1,11 +1,11 @@
 from abc import abstractmethod, ABC
 from typing import List
 
-from src.academico.dominio.aluno.cpf import CPF
+from src.shared.domain.cpf import CPF
 from src.gamificacao.dominio.selo.selo import Selo
 
 
-class RepositorioDeSelo(ABC):
+class RepositorioDeSelos(ABC):
 
     @abstractmethod
     def adicionar(self, selo: Selo) -> None:

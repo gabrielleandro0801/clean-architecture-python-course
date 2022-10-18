@@ -1,7 +1,7 @@
 from typing import List
 
-from src.academico.dominio.evento import Evento
-from src.academico.dominio.ouvinte import Ouvinte
+from src.shared.domain.evento.evento import Evento
+from src.shared.domain.evento.ouvinte import Ouvinte
 
 
 class PublicadorDeEventos:

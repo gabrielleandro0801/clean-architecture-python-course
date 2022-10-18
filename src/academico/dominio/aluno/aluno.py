@@ -1,6 +1,6 @@
 from typing import List
 
-from src.academico.dominio.aluno.cpf import CPF
+from src.shared.domain.cpf import CPF
 from src.academico.dominio.aluno.email import Email
 from src.academico.dominio.aluno.telefone import Telefone
 from src.academico.dominio.exceptions import UnableToAddTelefoneException
