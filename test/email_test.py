@@ -1,7 +1,7 @@
 from unittest import TestCase
 
-from src.dominio.aluno.email import Email
-from src.dominio.exceptions import InvalidEmailException
+from src.academico.dominio.aluno.email import Email
+from src.academico.dominio.exceptions import InvalidEmailException
 
 
 class EmailTest(TestCase):
