@@ -1,10 +1,9 @@
 from src.academico.dominio.aluno.aluno import Aluno
-from src.shared.domain.cpf import CPF
 from src.academico.dominio.aluno.email import Email
+from src.shared.domain.cpf import CPF
 
 
 class MatricularAlunoDTO:
-
     __nome: str
     __cpf: str
     __email: str
@@ -15,4 +14,8 @@ class MatricularAlunoDTO:
         self.__email = email
 
     def criar_aluno(self) -> Aluno:
-        return Aluno(nome=self.__nome, cpf=CPF(self.__cpf), email=Email(self.__email))
+        return Aluno(
+            nome=self.__nome,
+            cpf=CPF(self.__cpf),
+            email=Email(self.__email)
+        )
