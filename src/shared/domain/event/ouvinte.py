@@ -1,18 +1,18 @@
 from abc import ABC, abstractmethod
 
-from src.shared.domain.evento.evento import Evento
+from src.shared.domain.event.event import Event
 
 
 class Ouvinte(ABC):
 
-    def processa(self, evento: Evento) -> None:
+    def processa(self, evento: Event) -> None:
         if self.deve_processar(evento):
             self.reage_ao(evento)
 
     @abstractmethod
-    def deve_processar(self, evento: Evento) -> bool:
+    def deve_processar(self, evento: Event) -> bool:
         pass
 
     @abstractmethod
-    def reage_ao(self, evento: Evento):
+    def reage_ao(self, evento: Event):
         pass

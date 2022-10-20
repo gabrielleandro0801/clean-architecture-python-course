@@ -1,7 +1,7 @@
 from typing import List
 
-from src.shared.domain.evento.evento import Evento
-from src.shared.domain.evento.ouvinte import Ouvinte
+from src.shared.domain.event.event import Event
+from src.shared.domain.event.ouvinte import Ouvinte
 
 
 class PublicadorDeEventos:
@@ -10,6 +10,6 @@ class PublicadorDeEventos:
     def adicionar(self, ouvinte: Ouvinte) -> None:
         self.__ouvintes.append(ouvinte)
 
-    def publicar(self, evento: Evento):
+    def publicar(self, evento: Event):
         for ouvinte in self.__ouvintes:
             ouvinte.processa(evento)

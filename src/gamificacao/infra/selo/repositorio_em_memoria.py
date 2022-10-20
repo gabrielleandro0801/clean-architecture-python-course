@@ -9,7 +9,7 @@ class RepositorioDeSelosEmMemoria(RepositorioDeSelos):
     __selos: List[Selo] = []
 
     def selos_do_aluno(self, cpf: CPF) -> List[Selo]:
-        return list(filter(lambda selo: selo.cpf == cpf.numero, self.__selos))
+        return list(filter(lambda selo: selo.cpf == cpf.number, self.__selos))
 
     def adicionar(self, selo: Selo) -> None:
         self.__selos.append(selo)

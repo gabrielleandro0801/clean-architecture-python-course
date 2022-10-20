@@ -2,8 +2,8 @@ from src.academico.aplicacao.aluno.matricular.matricular_aluno_dto import Matric
 from src.academico.dominio.aluno.aluno import Aluno
 from src.academico.dominio.aluno.aluno_matriculado import AlunoMatriculado
 from src.academico.dominio.aluno.repositorio_de_alunos import RepositorioDeAlunos
-from src.shared.domain.evento.evento import Evento
-from src.shared.domain.evento.publicador_de_eventos import PublicadorDeEventos
+from src.shared.domain.event.event import Event
+from src.shared.domain.event.publicador_de_eventos import PublicadorDeEventos
 
 
 class MatricularAluno:
@@ -16,5 +16,5 @@ class MatricularAluno:
         aluno: Aluno = dados.criar_aluno()
         self.__repositorio.matricular(aluno)
 
-        evento: Evento = AlunoMatriculado(aluno.cpf)
+        evento: Event = AlunoMatriculado(aluno.cpf)
         self.__publicador.publicar(evento)

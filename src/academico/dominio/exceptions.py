@@ -6,36 +6,36 @@ class InvalidEmailException(Exception):
 
     def to_json(self) -> dict:
         return {
-            "message": InvalidEmailException.MESSAGE,
+            "message": self.MESSAGE,
             "email": self.__email
         }
 
 
 class InvalidTelefoneException(Exception):
-    MESSAGE: str = "Invalid telefone"
+    MESSAGE: str = "Invalid phone"
 
-    def __init__(self, ddd: str, telefone: str or None):
+    def __init__(self, ddd: str, phone: str or None):
         self.__ddd: str = ddd
-        self.__telefone: str = telefone
+        self.__phone: str = phone
 
     def to_json(self) -> dict:
         return {
-            "message": InvalidEmailException.MESSAGE,
+            "message": self.MESSAGE,
             "ddd": self.__ddd,
-            "telefone": self.__telefone
+            "phone": self.__phone
         }
 
 
-class UnableToAddTelefoneException(Exception):
-    MESSAGE: str = "Unable to add telefone"
+class UnableToAddPhoneException(Exception):
+    MESSAGE: str = "Unable to add phone"
 
-    def __init__(self, ddd: str, telefone: str or None):
+    def __init__(self, ddd: str, phone: str or None):
         self.__ddd: str = ddd
-        self.__telefone: str = telefone
+        self.__phone: str = phone
 
     def to_json(self) -> dict:
         return {
-            "message": UnableToAddTelefoneException.MESSAGE,
+            "message": self.MESSAGE,
             "ddd": self.__ddd,
-            "telefone": self.__telefone
+            "phone": self.__phone
         }

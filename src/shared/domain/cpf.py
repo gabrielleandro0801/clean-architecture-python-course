@@ -7,15 +7,15 @@ regex = re.compile(r'\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}')
 
 class CPF:
 
-    def __init__(self, valor: str):
-        if not is_valid(valor):
-            raise InvalidEmailException(valor)
-        self.__numero: str = valor
+    def __init__(self, value: str):
+        if not is_valid(value):
+            raise InvalidEmailException(value)
+        self.__number: str = value
 
     @property
-    def numero(self):
-        return self.__numero
+    def number(self) -> str:
+        return self.__number
 
 
 def is_valid(valor: str) -> bool:
-    return valor is None or not re.fullmatch(regex, valor)
+    return valor is not None and re.fullmatch(regex, valor)
