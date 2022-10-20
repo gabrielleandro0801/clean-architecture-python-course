@@ -2,7 +2,7 @@ from datetime import datetime
 
 from src.shared.domain.cpf import CPF
 from src.shared.domain.event.event import Event
-from src.shared.domain.event.tipo_de_evento import TipoDeEvento
+from src.shared.domain.event.event_type import EventType
 
 
 class AlunoMatriculado(Event):
@@ -17,8 +17,8 @@ class AlunoMatriculado(Event):
     def busca_cpf_do_aluno(self) -> str:
         return self.__cpf.number
 
-    def type(self) -> TipoDeEvento:
-        return TipoDeEvento.ALUNO_MATRICULADO
+    def type(self) -> EventType:
+        return EventType.ALUNO_MATRICULADO
 
     def information(self) -> dict:
         return {

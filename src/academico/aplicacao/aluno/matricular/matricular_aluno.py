@@ -3,18 +3,18 @@ from src.academico.dominio.aluno.aluno import Aluno
 from src.academico.dominio.aluno.aluno_matriculado import AlunoMatriculado
 from src.academico.dominio.aluno.repositorio_de_alunos import RepositorioDeAlunos
 from src.shared.domain.event.event import Event
-from src.shared.domain.event.publicador_de_eventos import PublicadorDeEventos
+from src.shared.domain.event.publisher import Publisher
 
 
 class MatricularAluno:
 
-    def __init__(self, repositorio: RepositorioDeAlunos, publicador: PublicadorDeEventos) -> None:
+    def __init__(self, repositorio: RepositorioDeAlunos, publicador: Publisher) -> None:
         self.__repositorio: RepositorioDeAlunos = repositorio
-        self.__publicador: PublicadorDeEventos = publicador
+        self.__publicador: Publisher = publicador
 
     def matricular(self, dados: MatricularAlunoDTO):
         aluno: Aluno = dados.criar_aluno()
         self.__repositorio.matricular(aluno)
 
         evento: Event = AlunoMatriculado(aluno.cpf)
-        self.__publicador.publicar(evento)
+        self.__publicador.publish(evento)

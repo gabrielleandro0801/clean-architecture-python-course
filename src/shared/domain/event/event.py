@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.shared.domain.event.tipo_de_evento import TipoDeEvento
+from src.shared.domain.event.event_type import EventType
 
 
 class Event(ABC):
@@ -10,7 +10,7 @@ class Event(ABC):
         pass
 
     @abstractmethod
-    def type(self) -> TipoDeEvento:
+    def type(self) -> EventType:
         pass
 
     @abstractmethod

@@ -1,5 +1,5 @@
 from enum import Enum
 
 
-class TipoDeEvento(Enum):
+class EventType(Enum):
     ALUNO_MATRICULADO = 1
