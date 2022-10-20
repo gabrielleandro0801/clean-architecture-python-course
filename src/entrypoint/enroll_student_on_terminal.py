@@ -1,5 +1,5 @@
-from src.academic.application.student.enroll.matricular_aluno import MatricularAluno
-from src.academic.application.student.enroll.matricular_aluno_dto import MatricularAlunoDTO
+from src.academic.application.student.enroll.enroll_student import EnrollStudent
+from src.academic.application.student.enroll.enroll_student_dto import EnrollStudentDTO
 from src.academic.domain.aluno.log_de_aluno_matriculado import LogDeAlunoMatriculado
 from src.gamificacao.aplicacao.gera_selo_aluno_novato import GeraSeloAlunoNovato
 from src.gamificacao.infra.selo.repositorio_em_memoria import RepositorioDeSelosEmMemoria
@@ -16,8 +16,8 @@ def execute():
     publisher.add(LogDeAlunoMatriculado())
     publisher.add(GeraSeloAlunoNovato(RepositorioDeSelosEmMemoria()))
 
-    matricular_aluno: MatricularAluno = MatricularAluno(RepositorioDeAlunosEmMemoria(), publisher)
-    matricular_aluno.matricular(MatricularAlunoDTO(name, cpf, email))
+    matricular_aluno: EnrollStudent = EnrollStudent(RepositorioDeAlunosEmMemoria(), publisher)
+    matricular_aluno.enroll(EnrollStudentDTO(name, cpf, email))
 
 
 if __name__ == '__main__':

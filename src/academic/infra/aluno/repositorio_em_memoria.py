@@ -1,22 +1,22 @@
 from typing import List
 
-from src.academic.domain.aluno.aluno import Aluno
+from src.academic.domain.aluno.student import Student
 from src.shared.domain.cpf import CPF
-from src.academic.domain.aluno.repositorio_de_alunos import RepositorioDeAlunos
+from src.academic.domain.aluno.student_repository import StudentRepository
 
 
-class RepositorioDeAlunosEmMemoria(RepositorioDeAlunos):
+class RepositorioDeAlunosEmMemoria(StudentRepository):
 
-    __alunos: List[Aluno] = []
+    __alunos: List[Student] = []
 
-    def buscar_por_cpf(self, cpf: CPF) -> Aluno:
+    def find_by_cpf(self, cpf: CPF) -> Student:
         qtd_alunos: List = list(filter(lambda aluno: aluno.cpf == cpf, self.__alunos))
         if not len(qtd_alunos):
-            raise Exception("Aluno nao encontrado")
+            raise Exception("Student nao encontrado")
         return qtd_alunos[0]
 
-    def listar_todos_alunos_matriculados(self) -> List[Aluno]:
+    def list_all(self) -> List[Student]:
         return self.__alunos
 
-    def matricular(self, aluno: Aluno) -> None:
+    def enroll(self, aluno: Student) -> None:
         self.__alunos.append(aluno)

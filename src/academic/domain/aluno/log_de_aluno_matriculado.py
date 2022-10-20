@@ -11,4 +11,4 @@ class LogDeAlunoMatriculado(Listener):
         return isinstance(evento, AlunoMatriculado)
 
     def reacts(self, evento: Any) -> None:
-        print(f"Aluno com CPF {evento.busca_cpf_do_aluno()} matriculado em {evento.moment()}")
+        print(f"Student com CPF {evento.busca_cpf_do_aluno()} matriculado em {evento.moment()}")

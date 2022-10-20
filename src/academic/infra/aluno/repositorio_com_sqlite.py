@@ -1,20 +1,20 @@
 from typing import List
 
-from src.academic.domain.aluno.aluno import Aluno
+from src.academic.domain.aluno.student import Student
 from src.shared.domain.cpf import CPF
-from src.academic.domain.aluno.repositorio_de_alunos import RepositorioDeAlunos
+from src.academic.domain.aluno.student_repository import StudentRepository
 
 
-class RepositorioDeAlunosComSQLite(RepositorioDeAlunos):
+class RepositorioDeAlunosComSQLite(StudentRepository):
 
     def __init__(self, connection):
         self.__connection = connection
 
-    def buscar_por_cpf(self, cpf: CPF) -> Aluno:
+    def find_by_cpf(self, cpf: CPF) -> Student:
         pass
 
-    def listar_todos_alunos_matriculados(self) -> List[Aluno]:
+    def list_all(self) -> List[Student]:
         pass
 
-    def matricular(self, aluno: Aluno) -> None:
+    def enroll(self, aluno: Student) -> None:
         pass
