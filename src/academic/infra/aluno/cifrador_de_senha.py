@@ -1,4 +1,4 @@
-from src.academico.dominio.aluno.cifrador_de_senha import CifradorDeSenha
+from src.academic.domain.aluno.cifrador_de_senha import CifradorDeSenha
 import hashlib
 
 

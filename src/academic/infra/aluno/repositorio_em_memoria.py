@@ -1,8 +1,8 @@
 from typing import List
 
-from src.academico.dominio.aluno.aluno import Aluno
+from src.academic.domain.aluno.aluno import Aluno
 from src.shared.domain.cpf import CPF
-from src.academico.dominio.aluno.repositorio_de_alunos import RepositorioDeAlunos
+from src.academic.domain.aluno.repositorio_de_alunos import RepositorioDeAlunos
 
 
 class RepositorioDeAlunosEmMemoria(RepositorioDeAlunos):

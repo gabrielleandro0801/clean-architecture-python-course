@@ -1,4 +1,4 @@
-from src.academico.dominio.aluno.aluno import Aluno
+from src.academic.domain.aluno.aluno import Aluno
 from src.shared.domain.cpf import CPF
 from email import Email
 

@@ -1,6 +1,6 @@
 from typing import Any
 
-from src.academico.dominio.aluno.aluno_matriculado import AlunoMatriculado
+from src.academic.domain.aluno.aluno_matriculado import AlunoMatriculado
 from src.shared.domain.event.event import Event
 from src.shared.domain.event.listener import Listener
 

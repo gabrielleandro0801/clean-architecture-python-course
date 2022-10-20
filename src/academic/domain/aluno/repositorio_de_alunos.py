@@ -1,7 +1,7 @@
 from abc import abstractmethod, ABC
 from typing import List
 
-from src.academico.dominio.aluno.aluno import Aluno
+from src.academic.domain.aluno.aluno import Aluno
 from src.shared.domain.cpf import CPF
 
 

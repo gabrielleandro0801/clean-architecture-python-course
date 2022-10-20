@@ -1,7 +1,7 @@
-from src.academico.aplicacao.aluno.matricular.matricular_aluno_dto import MatricularAlunoDTO
-from src.academico.dominio.aluno.aluno import Aluno
-from src.academico.dominio.aluno.aluno_matriculado import AlunoMatriculado
-from src.academico.dominio.aluno.repositorio_de_alunos import RepositorioDeAlunos
+from src.academic.application.student.enroll.matricular_aluno_dto import MatricularAlunoDTO
+from src.academic.domain.aluno.aluno import Aluno
+from src.academic.domain.aluno.aluno_matriculado import AlunoMatriculado
+from src.academic.domain.aluno.repositorio_de_alunos import RepositorioDeAlunos
 from src.shared.domain.event.event import Event
 from src.shared.domain.event.publisher import Publisher
 

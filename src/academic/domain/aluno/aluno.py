@@ -1,9 +1,9 @@
 from typing import List
 
 from src.shared.domain.cpf import CPF
-from src.academico.dominio.aluno.email import Email
-from src.academico.dominio.aluno.telefone import Telefone
-from src.academico.dominio.exceptions import UnableToAddTelefoneException
+from src.academic.domain.aluno.email import Email
+from src.academic.domain.aluno.telefone import Telefone
+from src.academic.domain.exceptions import UnableToAddTelefoneException
 
 
 class Aluno:

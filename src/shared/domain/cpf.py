@@ -1,6 +1,6 @@
 import re
 
-from src.academico.dominio.exceptions import InvalidEmailException
+from src.academic.domain.exceptions import InvalidEmailException
 
 regex = re.compile(r'\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}')
 

@@ -1,6 +1,6 @@
 from abc import abstractmethod, ABC
 
-from src.academico.dominio.aluno.aluno import Aluno
+from src.academic.domain.aluno.aluno import Aluno
 
 
 class EnviarEmailIndicacao(ABC):

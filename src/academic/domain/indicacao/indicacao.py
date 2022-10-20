@@ -1,6 +1,6 @@
 import datetime
 
-from src.academico.dominio.aluno.aluno import Aluno
+from src.academic.domain.aluno.aluno import Aluno
 
 
 class Indicacao:

@@ -1,4 +1,4 @@
-from src.academico.dominio.exceptions import InvalidTelefoneException
+from src.academic.domain.exceptions import InvalidTelefoneException
 
 
 class Telefone:
