@@ -12,4 +12,5 @@ class MemoryTagRepository(TagRepository):
         return list(filter(lambda tag: tag.cpf == cpf.number, self.__tags))
 
     def add(self, tag: Tag) -> None:
+        print(f"MemoryTagRepository | Saving tag [{tag.name}] for CPF [{tag.cpf}]")
         self.__tags.append(tag)

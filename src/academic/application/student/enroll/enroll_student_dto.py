@@ -15,7 +15,7 @@ class EnrollStudentDTO:
 
     def create_student(self) -> Student:
         return Student(
-            nome=self.__name,
+            name=self.__name,
             cpf=CPF(self.__cpf),
             email=Email(self.__email)
         )

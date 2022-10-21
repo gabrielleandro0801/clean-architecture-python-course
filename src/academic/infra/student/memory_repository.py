@@ -19,4 +19,5 @@ class MemoryStudentRepository(StudentRepository):
         return self.__students
 
     def enroll(self, aluno: Student) -> None:
+        print(f"{__class__.__name__} | Saving student in memory")
         self.__students.append(aluno)

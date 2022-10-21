@@ -1,15 +1,15 @@
 import re
 
-from src.academic.domain.exceptions import InvalidEmailException
+from src.shared.domain.exceptions import InvalidCPFException
 
-regex = re.compile(r'\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}')
+from validate_docbr import CPF as CPFValidator
 
 
 class CPF:
 
     def __init__(self, value: str):
         if not is_valid(value):
-            raise InvalidEmailException(value)
+            raise InvalidCPFException(value)
         self.__number: str = value
 
     @property
@@ -17,5 +17,6 @@ class CPF:
         return self.__number
 
 
-def is_valid(valor: str) -> bool:
-    return valor is not None and re.fullmatch(regex, valor)
+def is_valid(value: str) -> bool:
+    cpf = CPFValidator()
+    return value is not None and cpf.validate(value)

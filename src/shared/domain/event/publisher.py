@@ -11,5 +11,7 @@ class Publisher:
         self.__listeners.append(listener)
 
     def publish(self, event: Event):
+        print(f"{__class__.__name__} | Publishing event\n")
         for listener in self.__listeners:
             listener.process(event)
+        print(f"{__class__.__name__} | All listeners listened to the event")

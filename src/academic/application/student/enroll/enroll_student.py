@@ -9,12 +9,13 @@ from src.shared.domain.event.publisher import Publisher
 class EnrollStudent:
 
     def __init__(self, repository: StudentRepository, publisher: Publisher) -> None:
-        self.__repositorio: StudentRepository = repository
-        self.__publicador: Publisher = publisher
+        self.__repository: StudentRepository = repository
+        self.__publisher: Publisher = publisher
 
-    def enroll(self, dados: EnrollStudentDTO):
-        aluno: Student = dados.create_student()
-        self.__repositorio.enroll(aluno)
+    def enroll(self, student_dto: EnrollStudentDTO):
+        print(f"{__class__.__name__} | Enrolling student")
+        student: Student = student_dto.create_student()
+        self.__repository.enroll(student)
 
-        evento: Event = EnrolledStudentEvent(aluno.cpf)
-        self.__publicador.publish(evento)
+        event: Event = EnrolledStudentEvent(student.cpf)
+        self.__publisher.publish(event)
