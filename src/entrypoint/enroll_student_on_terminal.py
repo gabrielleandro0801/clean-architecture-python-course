@@ -4,7 +4,7 @@ from src.academic.domain.student.log_de_aluno_matriculado import LogDeAlunoMatri
 from src.gamificacao.aplicacao.gera_selo_aluno_novato import GeraSeloAlunoNovato
 from src.gamificacao.infra.selo.repositorio_em_memoria import RepositorioDeSelosEmMemoria
 from src.shared.domain.event.publisher import Publisher
-from src.academic.infra.aluno.repositorio_em_memoria import RepositorioDeAlunosEmMemoria
+from src.academic.infra.student.memory_repository import MemoryStudentRepository
 
 
 def execute():
@@ -16,7 +16,7 @@ def execute():
     publisher.add(LogDeAlunoMatriculado())
     publisher.add(GeraSeloAlunoNovato(RepositorioDeSelosEmMemoria()))
 
-    matricular_aluno: EnrollStudent = EnrollStudent(RepositorioDeAlunosEmMemoria(), publisher)
+    matricular_aluno: EnrollStudent = EnrollStudent(MemoryStudentRepository(), publisher)
     matricular_aluno.enroll(EnrollStudentDTO(name, cpf, email))
 
 

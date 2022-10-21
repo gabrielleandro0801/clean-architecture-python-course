@@ -2,7 +2,7 @@ from src.academic.domain.student.password_encryptor import PasswordEncryptor
 import hashlib
 
 
-class CifradorDeSenhaMD5(PasswordEncryptor):
+class MD5PasswordEncryptor(PasswordEncryptor):
     def encrypt(self, password: str) -> str:
         return hashlib.md5(password.encode()).hexdigest()
 
