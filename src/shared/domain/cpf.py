@@ -1,21 +1,22 @@
 import re
 
-from src.academico.dominio.exceptions import InvalidEmailException
+from src.shared.domain.exceptions import InvalidCPFException
 
-regex = re.compile(r'\\d{3}\\.\\d{3}\\.\\d{3}\\-\\d{2}')
+from validate_docbr import CPF as CPFValidator
 
 
 class CPF:
 
-    def __init__(self, valor: str):
-        if not is_valid(valor):
-            raise InvalidEmailException(valor)
-        self.__numero: str = valor
+    def __init__(self, value: str):
+        if not is_valid(value):
+            raise InvalidCPFException(value)
+        self.__number: str = value
 
     @property
-    def numero(self):
-        return self.__numero
+    def number(self) -> str:
+        return self.__number
 
 
-def is_valid(valor: str) -> bool:
-    return valor is None or not re.fullmatch(regex, valor)
+def is_valid(value: str) -> bool:
+    cpf = CPFValidator()
+    return value is not None and cpf.validate(value)
