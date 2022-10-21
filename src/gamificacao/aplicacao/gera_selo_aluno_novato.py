@@ -12,7 +12,7 @@ class GeraSeloAlunoNovato(Listener):
         self.__repositorio: RepositorioDeSelos = repositorio
 
     def must_process(self, evento: Event) -> bool:
-        return evento.type() == EventType.ALUNO_MATRICULADO
+        return evento.type() == EventType.ENROLLED_STUDENT
 
     def reacts(self, evento: Event) -> None:
         cpf_do_aluno: CPF = evento.information().get("cpf")

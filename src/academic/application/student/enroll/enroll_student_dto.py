@@ -1,5 +1,5 @@
-from src.academic.domain.aluno.student import Student
-from src.academic.domain.aluno.email import Email
+from src.academic.domain.student.student import Student
+from src.academic.domain.student.email import Email
 from src.shared.domain.cpf import CPF
 
 

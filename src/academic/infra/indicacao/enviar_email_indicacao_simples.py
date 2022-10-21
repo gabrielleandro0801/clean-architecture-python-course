@@ -1,8 +1,9 @@
-from src.academic.application.indication.enviar_email_indicacao import EnviarEmailIndicacao
-from src.academic.domain.aluno.student import Student
+from src.academic.application.indication.send_email import SendEmailIndication
+from src.academic.domain.student.student import Student
 
 
-class EnviarEmailSimples(EnviarEmailIndicacao):
+class EnviarEmailSimples(SendEmailIndication):
 
-    def enviar_para(self, indicado: Student) -> None:
-        pass
+    def send_to(self, indicated: Student) -> None:
+        print(f"Sending email to student {indicated.name}...")
+        print(f"Email sent!")

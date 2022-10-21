@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from src.academic.domain.aluno.email import Email
+from src.academic.domain.student.email import Email
 from src.academic.domain.exceptions import InvalidEmailException
 
 

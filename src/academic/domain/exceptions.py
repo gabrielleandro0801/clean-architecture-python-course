@@ -11,7 +11,7 @@ class InvalidEmailException(Exception):
         }
 
 
-class InvalidTelefoneException(Exception):
+class InvalidPhoneException(Exception):
     MESSAGE: str = "Invalid phone"
 
     def __init__(self, ddd: str, phone: str or None):

@@ -1,7 +1,7 @@
 from src.academic.application.student.enroll.enroll_student_dto import EnrollStudentDTO
-from src.academic.domain.aluno.student import Student
-from src.academic.domain.aluno.aluno_matriculado import AlunoMatriculado
-from src.academic.domain.aluno.student_repository import StudentRepository
+from src.academic.domain.student.student import Student
+from src.academic.domain.student.enrolled_student_event import EnrolledStudentEvent
+from src.academic.domain.student.student_repository import StudentRepository
 from src.shared.domain.event.event import Event
 from src.shared.domain.event.publisher import Publisher
 
@@ -16,5 +16,5 @@ class EnrollStudent:
         aluno: Student = dados.create_student()
         self.__repositorio.enroll(aluno)
 
-        evento: Event = AlunoMatriculado(aluno.cpf)
+        evento: Event = EnrolledStudentEvent(aluno.cpf)
         self.__publicador.publish(evento)

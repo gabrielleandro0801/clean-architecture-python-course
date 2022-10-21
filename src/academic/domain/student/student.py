@@ -1,9 +1,9 @@
 from typing import List
 
+from src.academic.domain.exceptions import UnableToAddPhoneException
 from src.shared.domain.cpf import CPF
-from src.academic.domain.aluno.email import Email
-from src.academic.domain.aluno.phone import Phone
-from src.academic.domain.exceptions import UnableToAddTelefoneException
+from src.academic.domain.student.email import Email
+from src.academic.domain.student.phone import Phone
 
 
 class Student:
@@ -17,8 +17,12 @@ class Student:
 
     def add_phone(self, ddd: str, number: str):
         if len(self.__phones) == 2:
-            raise UnableToAddTelefoneException(ddd, number)
+            raise UnableToAddPhoneException(ddd, number)
         self.__phones.append(Phone(ddd, number))
+
+    @property
+    def name(self) -> str:
+        return self.__name
 
     @property
     def cpf(self) -> CPF:

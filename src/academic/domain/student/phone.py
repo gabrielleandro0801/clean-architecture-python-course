@@ -1,11 +1,11 @@
-from src.academic.domain.exceptions import InvalidTelefoneException
+from src.academic.domain.exceptions import InvalidPhoneException
 
 
 class Phone:
 
     def __init__(self, ddd: str, number: str):
         if not is_valid(ddd, number):
-            raise InvalidTelefoneException(ddd, number)
+            raise InvalidPhoneException(ddd, number)
         self.__ddd = ddd
         self.__number = number
 
