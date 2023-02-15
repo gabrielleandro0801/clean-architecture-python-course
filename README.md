@@ -7,5 +7,5 @@ pip3 install -r requirements.txt
 
 ## Local Testing
 ``` bash
-python3
+python3 -m src.entrypoint.enroll_student_on_terminal
 ```
